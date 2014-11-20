@@ -9,19 +9,19 @@ Things you may want to cover:
 * Rails 4.1.8
 
 Classes:
-  <tt>Balancete</tt>: Representa um balancete
-  <tt>Item</tt>: Representa os grupos, subgrupos, contas sintéticas e contas analíticas
+  Balancete: Representa um balancete
+  Item: Representa os grupos, subgrupos, contas sintéticas e contas analíticas
 
 Métodos:
   Balancete:
-    * <tt>itens</tt>: todos os itens diretamente ligados ao balancete (Grupos)
-    * <tt>todos_itens</tt>: coleção com todos os grupos, subgrupos, contas sintéticas e analíticas em suas ordens.
+    * itens: todos os itens diretamente ligados ao balancete (Grupos)
+    * todos_itens: coleção com todos os grupos, subgrupos, contas sintéticas e analíticas em suas ordens.
 
   Item:
-    <tt>saldo_anterior</tt>: Mostra o saldo anterior. Se o item for uma conta analítica, retornará o valor do campo saldo_anterior_valor, caso contrário, retornará a soma do campo saldo_anterior_valor de todas os itens subsequentes na ordem (grupo -> subgrupos -> contas sintéticas -> contas analíticas)
-    <tt>debito</tt>: Mostra o débito. Se o item for uma conta analítica, retornará o valor do campo debito_valor, caso contrário, retornará a soma do campo debito_valor de todas os itens subsequentes na ordem (grupo -> subgrupos -> contas sintéticas -> contas analíticas)
-    <tt>crfedito</tt>: Mostra o crédito. Se o item for uma conta analítica, retornará o valor do campo credito_valor, caso contrário, retornará a soma do campo credito_valor de todas os itens subsequentes na ordem (grupo -> subgrupos -> contas sintéticas -> contas analíticas)
-    <tt>saldo_atual</tt>: Mostra o saldo atual de acordo com as especificações do grupo ao qual o item pertence.
-    <tt>codigo</tt>: retorna o código do item de acordo com sua hierarquia. Se for grupo "X", subgrupo "X.X", conta sintética "X.X.X" e conta analítica "X.X.X.X". O códígo é criado automaticamente.
+    * saldo_anterior: Mostra o saldo anterior. Se o item for uma conta analítica, retornará o valor do campo saldo_anterior_valor, caso contrário, retornará a soma do campo saldo_anterior_valor de todas os itens subsequentes na ordem (grupo -> subgrupos -> contas sintéticas -> contas analíticas)
+    * debito: Mostra o débito. Se o item for uma conta analítica, retornará o valor do campo debito_valor, caso contrário, retornará a soma do campo debito_valor de todas os itens subsequentes na ordem (grupo -> subgrupos -> contas sintéticas -> contas analíticas)
+    * fedito: Mostra o crédito. Se o item for uma conta analítica, retornará o valor do campo credito_valor, caso contrário, retornará a soma do campo credito_valor de todas os itens subsequentes na ordem (grupo -> subgrupos -> contas sintéticas -> contas analíticas)
+    * saldo_atual: Mostra o saldo atual de acordo com as especificações do grupo ao qual o item pertence.
+    * codigo: retorna o código do item de acordo com sua hierarquia. Se for grupo "X", subgrupo "X.X", conta sintética "X.X.X" e conta analítica "X.X.X.X". O códígo é criado automaticamente.
 
 Existe um seed que contém os dados de grupo ATIVO como descritos no teste.
